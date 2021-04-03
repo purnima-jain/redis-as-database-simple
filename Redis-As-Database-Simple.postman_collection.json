@@ -1,0 +1,137 @@
+{
+	"info": {
+		"_postman_id": "227b228a-8f49-4a9f-84d7-b1591667e9aa",
+		"name": "Redis-As-Database-Simple",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get-Customer-By-Id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/redis-as-database/customers/{customerId}",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"redis-as-database",
+						"customers",
+						"{customerId}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Save-Customer",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"firstName\": \"Eddard\",\r\n    \"lastName\" : \"Stark\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/redis-as-database/customers/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"redis-as-database",
+						"customers",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get-All-Customers",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/redis-as-database/customers",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"redis-as-database",
+						"customers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update-Customer",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"customerId\": 1,\r\n    \"firstName\": \"Arya\",\r\n    \"lastName\": \"Stark\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/redis-as-database/customers/update",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"redis-as-database",
+						"customers",
+						"update"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete-Customer",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/redis-as-database/customers/{customerId}/delete",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"redis-as-database",
+						"customers",
+						"{customerId}",
+						"delete"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
