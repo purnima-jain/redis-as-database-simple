@@ -12,7 +12,7 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-@RedisHash("CUSTOMER_TABLE")
+@RedisHash("CUSTOMER_STORE") // @RedisHash(value = "CUSTOMER_STORE", timeToLive = 20000)
 public class Customer implements Serializable {
 
 	private static final long serialVersionUID = 1L;
