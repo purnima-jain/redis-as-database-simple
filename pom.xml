@@ -35,13 +35,6 @@
 			<artifactId>spring-boot-starter-data-redis</artifactId>
 		</dependency>
 		<!-- END: Spring-Data Redis (Access + Driver) -->
-		
-		<!-- BEGIN: GenericObjectPoolConfig -->
-		<dependency>
-            <groupId>org.apache.commons</groupId>
-            <artifactId>commons-pool2</artifactId>
-        </dependency>
-        <!-- END: GenericObjectPoolConfig -->
 
 		<!-- BEGIN: Lombok -->
 		<dependency>
