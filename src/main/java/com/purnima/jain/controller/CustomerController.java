@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.purnima.jain.domain.Customer;
@@ -66,6 +67,14 @@ public class CustomerController {
 	public void deleteCustomerById(@PathVariable("customerId") String customerId) {
 		log.info("Inside the CustomerController REST Controller for DELETE::deleteCustomerById() for customerId :: {}", customerId);
 		customerService.deleteCustomerById(customerId);
+	}
+	
+	@GetMapping("/collection")
+	public List<Customer> getCustomersByFirstNameAndLastName(@RequestParam(name = "firstName", required = true) String firstName, 
+															@RequestParam(name = "lastName", required = true) String lastName) {
+		
+		log.info("Inside the CustomerController REST Controller for GET::getCustomerCollectionByFirstNameAndLastName() for firstName :: {} and lastName :: {}", firstName, lastName);
+		return customerService.getCustomersByFirstNameAndLastName(firstName, lastName);
 	}
 
 }

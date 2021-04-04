@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "227b228a-8f49-4a9f-84d7-b1591667e9aa",
+		"_postman_id": "5c465cde-b554-474c-bf62-3d343e96e29b",
 		"name": "Redis-As-Database-Simple",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
@@ -128,6 +128,38 @@
 						"customers",
 						"{customerId}",
 						"delete"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get-Customer-by-firstName-and-lastName",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/redis-as-database/customers/collection?firstName=Eddard&lastName=Stark",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"redis-as-database",
+						"customers",
+						"collection"
+					],
+					"query": [
+						{
+							"key": "firstName",
+							"value": "Eddard"
+						},
+						{
+							"key": "lastName",
+							"value": "Stark"
+						}
 					]
 				}
 			},

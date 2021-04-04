@@ -4,6 +4,7 @@ import java.io.Serializable;
 
 import org.springframework.data.annotation.Id;
 import org.springframework.data.redis.core.RedisHash;
+import org.springframework.data.redis.core.index.Indexed;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -20,8 +21,10 @@ public class Customer implements Serializable {
 	@Id // This id annotation is NOT from spring-data-jpa
 	private String customerId;
 
+	@Indexed
 	private String firstName;
 
+	@Indexed
 	private String lastName;
 
 }

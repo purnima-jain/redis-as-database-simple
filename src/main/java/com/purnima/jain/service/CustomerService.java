@@ -49,4 +49,10 @@ public class CustomerService {
 		customerRepository.deleteById(customerId);
 	}
 
+	public List<Customer> getCustomersByFirstNameAndLastName(String firstName, String lastName) {
+		log.info("Inside the CustomerService::getCustomersByFirstNameAndLastName() for firstName :: {} and lastName :: {}", firstName, lastName);
+		List<Customer> customerList = customerRepository.findByFirstNameAndLastName(firstName, lastName);
+		return customerList;
+	}
+
 }
